@@ -1,0 +1,17 @@
+[0.001][INFO]:      ChromeDriver 23.0.1240.0 C:\Ruby192\bin\chromedriver.exe
+[0.165][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.detach": true,
+   "chromeOptions": {
+      "detach": true
+   },
+   "cssSelectorsEnabled": true,
+   "javascriptEnabled": true,
+   "nativeEvents": false,
+   "platform": "ANY",
+   "rotatable": false,
+   "takesScreenshot": false,
+   "version": ""
+}
+
+[0.192][INFO]:      Using named testing interface

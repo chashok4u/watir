@@ -1,0 +1,5 @@
+global:
+    browser : chrome              #possible values: ie, firefox, chrome
+    url     : "https://www.exercise1.com/values"
+    userid  : "acheekat"
+    password : "Change_123"
