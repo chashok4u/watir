@@ -12,6 +12,7 @@ Feature: Total Balance
     Then the user is able to login<siteengine>
     When user wants to enter data into <siteengine> with <value1> and <value2> and <value3> and <value4> and <value5>
     When user wants to verify total balance <siteengine> with <value1> and <value2> and <value3> and <value4> and <value5>
+    Then user able to validates total balance<siteengine> with <value1> and <value2> and <value3> and <value4> and <value5>
 
   Scenarios:
     | browser | clhurl | userid | password | siteengine | value1 | value2 | value3 | value4 | value5 |
