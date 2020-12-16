@@ -32,10 +32,19 @@ When /^user wants to enter data into (.*) with (.*) and (.*) and (.*) and (.*) a
 end
 
 When /^user wants to verify total balance (.*) with (.*) and (.*) and (.*) and (.*) and (.*)$/ do |_, value1, value2, value3, value4, value5|
-  on @site, :pg_balance do |page|
+  on @site, :blance_page do |page|
       sleep 5
       page.verify_total_balance value1, value2, value3, value4, value5
 
+
+  end
+end
+
+
+Then /^user able to validates total balance(.*) with (.*) and (.*) and (.*) and (.*) and (.*)$/ do |_, value1, value2, value3, value4, value5|
+  on @site, :blance_page do |page|
+    page.is_balance_exists    value1, value2, value3, value4, value5
+    #page.logout
 
   end
 end
