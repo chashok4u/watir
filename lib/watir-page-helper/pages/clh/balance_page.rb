@@ -6,6 +6,7 @@ module WatirPageHelper::Clh
     extend WatirPageHelper::ClassMethods
 
     def enter_first_value (value1)
+      #enter values
       val_1 = @browser.text_field(:id => "value1")
       if val_1.exists?
         val_1.clear
@@ -118,9 +119,24 @@ module WatirPageHelper::Clh
       end
     else
       $rep.addtoReport($testReport, 'Total Value', 'Failed' , 'Total Value Field did not loaded')
-
+    return total_bal
     end
   end
+
+    def is_balance_exists(value1, value2, value3, value4, value5)
+      bal = @browser.text_field(:id => "total_balance")
+      total_bal = verify_total_balance(value1, value2, value3, value4, value5)
+      if bal.exists?
+        if bal.value.include? total_bal
+          $rep.addtoReport($testReport, 'Total Value', 'Passed', $total_bal + 'Total Value Entered successfully')
+        else
+          $rep.addtoReport($testReport, 'Total Value', 'Failed' , 'Total Value Field did not Entered')
+        end
+      else
+        $rep.addtoReport($testReport, 'Total Value', 'Failed' , 'Total Value Field did not loaded')
+
+      end
+    end
 
 
   end
